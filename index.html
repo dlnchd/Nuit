@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRD - L'avenir numérique.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand" onclick="app.showHome()"><img src="dossier_img/logo+text206px.png" alt="NIRD Logo" class="brand-logo"></a>
+            <div class="nav-links">
+                <a href="#methode" onclick="app.showHome()">Méthode</a>
+                <a href="#piliers" onclick="app.showHome()">Piliers</a>
+                <a href="#equipe" onclick="app.showHome()">Équipe</a>
+                <a href="#" onclick="app.startGame()" class="btn-nav-action">Jouer</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="landing-page" class="view active">
+            
+            <section class="hero-section">
+                <div class="hero-content reveal active">
+                    <span class="tagline">Nouveau Standard Éducatif</span>
+                    <h1>Numérique Inclusif.<br>Responsable. Durable.</h1>
+                    <p>La puissance de la technologie alliée à l'éthique. Transformez votre établissement avec élégance et responsabilité.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="app.startGame()">Lancer l'expérience</button>
+                        <a href="#methode" class="btn btn-link">En savoir plus</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual reveal">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" alt="Bureau éco-responsable" class="hero-img-cover">
+                    <div class="floating-ui f1">
+                        <span class="ui-icon">☁️</span>
+                        <div><strong>Souveraineté</strong><br><small>Données Protégées</small></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methode" class="section-bg reveal">
+                <div class="section-header">
+                    <h2>Une méthode claire.</h2>
+                    <p>Quatre étapes. Un impact immédiat.</p>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-card card-image" style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop');">
+                        <div class="overlay-dark"></div>
+                        <div class="content-front">
+                            <h3>Diagnostiquer</h3>
+                            <p>Analyser l'existant pour mieux agir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bento-card card-dark">
+                        <div class="bento-icon">2.</div>
+                        <h3>Sensibiliser</h3>
+                        <p>Former les esprits. Élèves et enseignants unis.</p>
+                    </div>
+                    
+                    <div class="bento-card card-dark">
+                        <div class="bento-icon">3.</div>
+                        <h3>Agir</h3>
+                        <p>Réparer, réemployer et installer du Libre.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="piliers" class="section-white reveal">
+                <div class="section-header">
+                    <h2>Trois piliers.</h2>
+                    <p>Conçus pour durer.</p>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop" class="card-img-top" alt="Nature">
+                        <div class="card-content">
+                            <h3>Durable.</h3>
+                            <p>Prolonger la vie des appareils est l'acte écologique ultime.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop" class="card-img-top" alt="Security">
+                        <div class="card-content">
+                            <h3>Responsable.</h3>
+                            <p>Vos données vous appartiennent. Point final.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop" class="card-img-top" alt="Inclusion">
+                        <div class="card-content">
+                            <h3>Inclusif.</h3>
+                            <p>La technologie au service de tous, sans exception.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="equipe" class="section-bg reveal">
+                <div class="section-header">
+                    <h2>L'équipe nuit de l'informatique 2025.</h2>
+                    <p>Des étudiants motivés.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Dylan Choudjay</h3>
+                        <span class="role">Chef de Projet - 2ème année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Thomas Savourin</h3>
+                        <span class="role">2ème année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Mathieu Laudet</h3>
+                        <span class="role">2ème année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Nathan Chupin</h3>
+                        <span class="role">2ème année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Ibrahim Drame</h3>
+                        <span class="role">2ème année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Allasane Bathily</h3>
+                        <span class="role">1ère année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Osée Massamba</h3>
+                        <span class="role">1ère année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Emerick Angele</h3>
+                        <span class="role">1ère année</span>
+                    </div>
+                    <div class="team-member">
+                        <h3>Sami Ghazi</h3>
+                        <span class="role">1ère année</span>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <div class="footer-content">
+                    <span>Copyright © 2025 Nuit de l'Info.</span>
+                    <div class="footer-links">
+                        <a href="#">Confidentialité</a>
+                        <a href="#">Conditions</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="game-app" class="view" style="display:none;">
+            <div class="game-hud">
+                <button class="btn-back" onclick="app.showHome()">Quitter</button>
+                <div class="progress-container">
+                    <div class="progress-track"><div id="progress-fill"></div></div>
+                </div>
+                <div style="font-weight: 600;">Score: <span id="current-score" style="color:var(--apple-blue)">0</span></div>
+            </div>
+            <div class="game-container">
+                <div id="level-0" class="game-screen active">
+                    <div class="game-card">
+                        <span class="level-tag">Niveau 1</span>
+                        <h2>Nettoyage</h2>
+                        <p>Touchez les polluants numériques.</p>
+                        <div id="pollution-zone" class="interactive-area"></div>
+                    </div>
+                </div>
+                <div id="level-1" class="game-screen"><div class="game-card"><h2>Tri</h2><div class="sorting-game"><div id="waste-items" class="waste-pool"></div><div class="bins-container" style="display:flex;gap:10px;margin-top:20px"><div class="choice-btn" onclick="game.tryDrop('repair')">🛠️ Réparer</div><div class="choice-btn" onclick="game.tryDrop('recycle')">♻️ Recycler</div><div class="choice-btn" onclick="game.tryDrop('trash')" style="color:#ff3b30">🗑️ Jeter</div></div></div></div></div>
+                 <div id="level-2" class="game-screen"><div class="game-card"><h2>Memory</h2><div id="memory-grid" class="memory-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:20px;"></div></div></div>
+                 <div id="level-3" class="game-screen"><div class="game-card"><h2>Choix</h2><div id="quiz-container"></div></div></div>
+                 <div id="level-4" class="game-screen"><div class="game-card"><h1>Fin.</h1><p>Score: <span id="final-score-display">0</span></p><button class="btn btn-primary" onclick="app.showHome()">Accueil</button></div></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast-area"></div>
+    <script src="script.js"></script>
+</body>
+</html>

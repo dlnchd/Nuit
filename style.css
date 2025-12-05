@@ -1,0 +1,146 @@
+:root {
+    --apple-black: #1d1d1f;
+    --apple-gray-dark: #86868b;
+    --apple-bg: #f5f5f7;
+    --apple-white: #ffffff;
+    --apple-blue: #0071e3;
+    --apple-blue-hover: #0077ed;
+    --nav-bg: rgba(0, 0, 0, 0.8);
+    --radius-card: 28px;
+    --radius-btn: 980px;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    background: var(--apple-white);
+    color: var(--apple-black);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-weight: 600; margin: 0; letter-spacing: -0.02em; }
+
+/* NAV & UTILS */
+.navbar { position: sticky; top: 0; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(20px); height: 48px; z-index: 999; display: flex; justify-content: center; }
+.nav-container { width: 100%; max-width: 1000px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.brand { color: #f5f5f7; text-decoration: none; font-weight: 600; display: flex; align-items: center; }
+.brand-logo { height: 32px; width: auto; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: #d1d1d1; text-decoration: none; font-size: 12px; transition: color 0.3s; }
+.nav-links a:hover { color: white; }
+.btn-nav-action { background: var(--apple-blue); padding: 4px 12px; border-radius: 12px; color: white !important; }
+
+/* HERO IMAGE */
+.hero-section { padding: 100px 20px 60px; text-align: center; }
+.hero-content { max-width: 800px; margin: 0 auto 40px; }
+.hero-content h1 { font-size: 56px; margin-bottom: 20px; line-height: 1.1; }
+.hero-content p { font-size: 24px; color: var(--apple-gray-dark); margin-bottom: 30px; }
+
+/* Conteneur de l'image Hero */
+.hero-visual {
+    position: relative;
+    max-width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.hero-img-cover {
+    width: 100%; height: 100%;
+    object-fit: cover; /* L'image remplit tout sans déformer */
+    transition: transform 1s ease;
+}
+.hero-visual:hover .hero-img-cover { transform: scale(1.03); }
+
+/* Éléments flottants sur l'image */
+.floating-ui {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    padding: 15px 25px;
+    border-radius: 18px;
+    display: flex; gap: 15px; align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.f1 { bottom: 30px; left: 30px; animation: float 6s infinite ease-in-out; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* BUTTONS */
+.btn { display: inline-flex; padding: 12px 24px; border-radius: var(--radius-btn); font-size: 17px; cursor: pointer; border: none; transition: 0.3s; text-decoration: none; }
+.btn-primary { background: var(--apple-blue); color: white; }
+.btn-primary:hover { background: var(--apple-blue-hover); }
+.btn-link { background: none; color: var(--apple-blue); font-size: 19px; }
+.btn-link:hover { text-decoration: underline; }
+
+/* BENTO GRID & IMAGES */
+.section-bg { background: var(--apple-bg); padding: 80px 20px; }
+.section-white { background: var(--apple-white); padding: 80px 20px; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { font-size: 48px; margin-bottom: 10px; }
+.bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+
+.bento-card {
+    background: var(--apple-white);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex; flex-direction: column;
+    height: 100%;
+}
+.bento-card:hover { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* Image en haut de carte */
+.card-img-top {
+    width: 100%; height: 200px; object-fit: cover;
+}
+.card-content { padding: 30px; }
+.card-content h3 { font-size: 24px; margin-bottom: 10px; }
+.card-content p { color: var(--apple-gray-dark); font-size: 17px; }
+
+/* Carte sombre */
+.card-dark { background: #1d1d1f; color: white; padding: 40px; }
+.card-dark .bento-icon { font-size: 3rem; margin-bottom: 20px; color: var(--apple-gray-dark); }
+.card-dark p { color: #86868b; }
+
+/* Carte "Image de fond" */
+.card-image {
+    position: relative; height: 350px; padding: 40px;
+    background-size: cover; background-position: center; color: white;
+    justify-content: flex-end;
+}
+.overlay-dark {
+    position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+.content-front { position: relative; z-index: 1; }
+
+/* TEAM MEMBERS */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto; text-align: center; }
+.team-member h3 { font-size: 19px; margin-bottom: 5px; }
+.role { color: var(--apple-blue); font-size: 14px; font-weight: 600; text-transform: uppercase; }
+
+/* FOOTER */
+.site-footer { background: #f5f5f7; padding: 40px 20px; text-align: center; font-size: 12px; color: #86868b; }
+.footer-links a { color: #515154; margin: 0 10px; text-decoration: none; }
+
+/* JEU DARK MODE */
+#game-app { background: black; min-height: 100vh; color: white; }
+.game-hud { background: rgba(20,20,20,0.8); padding: 15px 20px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+.game-card { background: #1c1c1e; padding: 40px; border-radius: 20px; max-width: 800px; margin: 40px auto; text-align: center; }
+.btn-back { background: none; border: none; color: var(--apple-blue); font-size: 17px; cursor: pointer; }
+.interactive-area { height: 300px; background: #000; border: 1px solid #333; border-radius: 20px; position: relative; margin-top: 20px; }
+.cloud-item { position: absolute; font-size: 3rem; cursor: pointer; transition: transform 0.1s; }
+.choice-btn { background: #2c2c2e; padding: 20px; margin-bottom: 10px; border-radius: 12px; cursor: pointer; }
+.choice-btn:hover { background: #3a3a3c; }
+
+/* Toast */
+#toast-area { position: fixed; top: 70px; left: 50%; transform: translateX(-50%); z-index: 2000; }
+.toast { background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); backdrop-filter: blur(10px); }
+
+/* Animation Reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
